@@ -117,3 +117,7 @@ export NVM_DIR="$HOME/.nvm"
 # PICO SDK
 export PICO_SDK_PATH=/Users/dan/repos/pico/pico-sdk
 
+# dotfile repo stuff
+export DOTFILES=$HOME/repos/dotfiles.git
+alias gitdf='git --git-dir=$DOTFILES --work-tree=$HOME'
+
