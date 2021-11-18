@@ -29,6 +29,7 @@ set relativenumber
 " search settings
 set ignorecase
 set smartcase
+set nohlsearch
 
 " scroll offset
 set scrolloff=8
