@@ -30,6 +30,9 @@ set relativenumber
 set ignorecase
 set smartcase
 
+" scroll offset
+set scrolloff=8
+
 " set leader key
 let mapleader = " "
 
