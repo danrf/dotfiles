@@ -21,6 +21,25 @@ filetype plugin indent on
 " tabs
 set tabstop=4
 set shiftwidth=4
+set softtabstop=4
+set expandtab
+set smartindent
+
+" word wrap
+set nowrap
+nnoremap <leader>w :set wrap!<CR>
+
+" swap/undo file
+set noswapfile
+set nobackup
+set undodir=~/.config/nvim/undodir
+set undofile
+
+" file behaviour
+set hidden
+
+" turn off error bell
+set noerrorbells
 
 " line numbers
 set number
@@ -30,6 +49,11 @@ set relativenumber
 set ignorecase
 set smartcase
 set nohlsearch
+set incsearch
+
+" color column
+set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=grey
 
 " scroll offset
 set scrolloff=8
@@ -56,8 +80,4 @@ nnoremap <leader>r :reg<CR>
 
 " buffers
 nnoremap <leader>t :ls<CR>
-
-" word wrap
-set nowrap
-nnoremap <leader>w :set wrap!<CR>
 
