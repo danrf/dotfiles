@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/opt/curl/bin:/usr/local/bin:/Users/dan/Library/Python/3.7/bin:$PATH
 
+# Add rust to path
+export PATH=$HOME/.cargo/bin:$PATH
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/danf/.oh-my-zsh"
 
