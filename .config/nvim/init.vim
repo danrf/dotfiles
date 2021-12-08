@@ -6,16 +6,32 @@ Plug 'sheerun/vim-polyglot'
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'rktjmp/lush.nvim'
-Plug 'ellisonleao/gruvbox.nvim'
+Plug 'EdenEast/nightfox.nvim'
 call plug#end()
 
 " colors
-set nocompatible
-set termguicolors
-set background=dark
-colorscheme gruvbox
+"syntax on
+"set background=dark
 
-syntax enable
+" vimscript
+lua << EOF
+local nightfox = require('nightfox')
+
+-- This function set the configuration of nightfox. If a value is not passed in the setup function
+-- it will be taken from the default configuration above
+nightfox.setup({
+  fox = "nordfox", -- change the colorscheme to use nordfox
+  transparent = false,
+})
+
+-- Load the configuration set above and apply the colorscheme
+nightfox.load()
+EOF
+
+
+" Load the colorscheme
+" colorscheme nightfox
+
 filetype plugin indent on
 
 " tabs
@@ -50,10 +66,6 @@ set ignorecase
 set smartcase
 set nohlsearch
 set incsearch
-
-" color column
-set colorcolumn=80
-highlight ColorColumn ctermbg=0 guibg=grey
 
 " scroll offset
 set scrolloff=8
