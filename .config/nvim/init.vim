@@ -29,6 +29,8 @@ set relativenumber
 " search settings
 set ignorecase
 set smartcase
+set incsearch
+set nohlsearch
 
 " set leader key
 let mapleader = " "
