@@ -1,8 +1,11 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/opt/curl/bin:/usr/local/bin:/Users/dan/Library/Python/3.7/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/opt/curl/bin:/usr/local/bin:/Users/dan/Library/Python/3.7/bin:$PATH
+
+# Add rust to path
+export PATH=$HOME/.cargo/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/dan/.oh-my-zsh"
+export ZSH="/home/danf/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -115,7 +118,7 @@ export NVM_DIR="$HOME/.nvm"
 #eval $(thefuck --alias)
 
 # PICO SDK
-export PICO_SDK_PATH=/Users/dan/repos/pico/pico-sdk
+# export PICO_SDK_PATH=/Users/dan/repos/pico/pico-sdk
 
 # dotfile repo stuff
 export DOTFILES=$HOME/repos/dotfiles.git

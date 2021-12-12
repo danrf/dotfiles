@@ -6,21 +6,56 @@ Plug 'sheerun/vim-polyglot'
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'rktjmp/lush.nvim'
-Plug 'ellisonleao/gruvbox.nvim'
+Plug 'EdenEast/nightfox.nvim'
 call plug#end()
 
 " colors
-set nocompatible
-set termguicolors
-set background=dark
-colorscheme gruvbox
+"syntax on
+"set background=dark
 
-syntax enable
+" vimscript
+lua << EOF
+local nightfox = require('nightfox')
+
+-- This function set the configuration of nightfox. If a value is not passed in the setup function
+-- it will be taken from the default configuration above
+nightfox.setup({
+  fox = "nordfox", -- change the colorscheme to use nordfox
+  transparent = false,
+})
+
+-- Load the configuration set above and apply the colorscheme
+nightfox.load()
+EOF
+
+
+" Load the colorscheme
+" colorscheme nightfox
+
 filetype plugin indent on
 
 " tabs
 set tabstop=4
 set shiftwidth=4
+set softtabstop=4
+set expandtab
+set smartindent
+
+" word wrap
+set nowrap
+nnoremap <leader>w :set wrap!<CR>
+
+" swap/undo file
+set noswapfile
+set nobackup
+set undodir=~/.config/nvim/undodir
+set undofile
+
+" file behaviour
+set hidden
+
+" turn off error bell
+set noerrorbells
 
 " line numbers
 set number
@@ -29,8 +64,12 @@ set relativenumber
 " search settings
 set ignorecase
 set smartcase
-set incsearch
+=======
 set nohlsearch
+set incsearch
+
+" scroll offset
+set scrolloff=8
 
 " set leader key
 let mapleader = " "
@@ -54,8 +93,4 @@ nnoremap <leader>r :reg<CR>
 
 " buffers
 nnoremap <leader>t :ls<CR>
-
-" word wrap
-set nowrap
-nnoremap <leader>w :set wrap!<CR>
 
