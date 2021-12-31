@@ -64,7 +64,6 @@ set relativenumber
 " search settings
 set ignorecase
 set smartcase
-=======
 set nohlsearch
 set incsearch
 

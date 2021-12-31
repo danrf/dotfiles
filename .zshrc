@@ -5,7 +5,7 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/opt/curl/bin:/usr/local/bin:/U
 export PATH=$HOME/.cargo/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/danf/.oh-my-zsh"
+export ZSH="/Users/dan/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -44,7 +44,7 @@ ZSH_THEME="geoffgarside"
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
 
-#export LS_COLORS="di=1;34:ln=4;35:ex=4;31"
+export LS_COLORS="di=1;34:ln=4;35:ex=4;31"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
