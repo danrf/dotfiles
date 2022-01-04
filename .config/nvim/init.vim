@@ -5,33 +5,13 @@ call plug#begin()
 Plug 'sheerun/vim-polyglot'
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'rktjmp/lush.nvim'
-Plug 'EdenEast/nightfox.nvim'
+Plug 'joshdick/onedark.vim'
 call plug#end()
 
 " colors
-"syntax on
-"set background=dark
-
-" vimscript
-lua << EOF
-local nightfox = require('nightfox')
-
--- This function set the configuration of nightfox. If a value is not passed in the setup function
--- it will be taken from the default configuration above
-nightfox.setup({
-  fox = "nordfox", -- change the colorscheme to use nordfox
-  transparent = false,
-})
-
--- Load the configuration set above and apply the colorscheme
-nightfox.load()
-EOF
-
-
-" Load the colorscheme
-" colorscheme nightfox
-
+syntax on
+set background=dark
+colorscheme onedark
 filetype plugin indent on
 
 " tabs

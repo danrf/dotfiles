@@ -1,11 +1,15 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/opt/curl/bin:/usr/local/bin:/Users/dan/Library/Python/3.7/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/opt/curl/bin:/usr/local/bin:$PATH
+
+if [[ -z "${WSL_DISTRO_NAME}" ]]; then
+    export PATH=/Users/dan/Library/Python/3.7/bin:$PATH
+fi
 
 # Add rust to path
 export PATH=$HOME/.cargo/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/dan/.oh-my-zsh"
+export ZSH="/home/danf/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
