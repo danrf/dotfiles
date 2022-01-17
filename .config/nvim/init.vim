@@ -5,17 +5,13 @@ call plug#begin()
 Plug 'sheerun/vim-polyglot'
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'rktjmp/lush.nvim'
 Plug 'joshdick/onedark.vim'
 call plug#end()
 
-colors
+" colors
 syntax on
 set background=dark
-
-" Load the colorscheme
 colorscheme onedark
-
 filetype plugin indent on
 
 " tabs
