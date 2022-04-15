@@ -1,18 +1,18 @@
-let g:polyglot_disabled = ['rust']
-
 " plugins
 call plug#begin()
 Plug 'sheerun/vim-polyglot'
-Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'joshdick/onedark.vim'
+Plug 'EdenEast/nightfox.nvim'
 call plug#end()
 
 " colors
+if (has('termguicolors'))
+  set termguicolors
+endif
+
 syntax on
 set background=dark
-colorscheme onedark
-filetype plugin indent on
+colorscheme nordfox
 
 " tabs
 set tabstop=4
