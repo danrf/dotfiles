@@ -17,6 +17,9 @@ set background=dark
 let g:tokyonight_italic_functions = 1
 colorscheme tokyonight
 
+set cursorline
+hi CursorLineNr guifg=#c0caf5
+
 " lualine
 lua << END
 require('lualine').setup {
