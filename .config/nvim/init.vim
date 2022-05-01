@@ -5,6 +5,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'neovim/nvim-lspconfig'
 call plug#end()
 
 " colors
@@ -16,9 +20,6 @@ syntax on
 set background=dark
 let g:tokyonight_italic_functions = 1
 colorscheme tokyonight
-
-set cursorline
-hi CursorLineNr guifg=#c0caf5
 
 " lualine
 lua << END
@@ -51,6 +52,13 @@ require('lualine').setup {
   tabline = {},
   extensions = {}
 }
+END
+
+" language servers
+lua << END
+require('lspconfig').rls.setup{}
+require('lspconfig').pylsp.setup{}
+require('lspconfig').clangd.setup{}
 END
 
 

@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/opt/curl/bin:/usr/local/bin:$HOME/.cargo/bin:/usr/local/go/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/opt/curl/bin:/usr/local/bin:$HOME/.cargo/bin:/usr/local/go/bin:/usr/local/anaconda3/bin:$PATH
 
 if [[ -z "${WSL_DISTRO_NAME}" ]]; then
     export PATH=/Users/dan/Library/Python/3.7/bin:$PATH
