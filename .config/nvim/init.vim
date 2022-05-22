@@ -2,24 +2,19 @@
 call plug#begin()
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'savq/melange'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'urbit/hoon.vim'
+Plug 'preservim/nerdtree'
 call plug#end()
 
-" colors
-if (has('termguicolors'))
-  set termguicolors
-endif
-
-syntax on
-set background=dark
-let g:tokyonight_italic_functions = 1
-colorscheme tokyonight
+set termguicolors
+colorscheme melange
 
 " lualine
 lua << END
@@ -89,6 +84,9 @@ set noerrorbells
 set number
 set relativenumber
 
+" cursor line
+set cursorline
+
 " search settings
 set ignorecase
 set smartcase
@@ -101,23 +99,13 @@ set scrolloff=8
 " set leader key
 let mapleader = " "
 
-" esc remap
-inoremap jj <C-c>
+" Telescope
+nnoremap <C-p> <cmd>Telescope find_files<cr>
+nnoremap <C-j> <cmd>Telescope live_grep<cr>
+nnoremap <C-t> <cmd>Telescope buffers<cr>
+"nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-" windows
-nnoremap <leader>q :wincmd q<CR>
-nnoremap <leader>v :wincmd v<CR>
-nnoremap <leader>s :wincmd s<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>l :wincmd l<CR>
-nnoremap <leader>n :bnext<CR>
-nnoremap <leader>p :bprevious<CR>
-
-" registers
-nnoremap <leader>r :reg<CR>
-
-" buffers
-nnoremap <leader>t :ls<CR>
+" nerdtree
+nnoremap <C-n> :NERDTreeToggle<cr>
+nnoremap <C-f> :NERDTreeFind<cr>
 
