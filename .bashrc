@@ -65,6 +65,9 @@ alias vim='nvim'
 # latest tmux
 alias tmux='/usr/local/bin/tmux'
 
+# python -> python3
+alias python='python3'
+
 # set home config variable
 export XDG_CONFIG_HOME='/home/dan/.config'
 
